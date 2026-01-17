@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Hot Beans Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #080808;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 6px;
+        }
+
+        .contact-box,
+        .contact-form,
+        .faq {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 11px rgba(0,0,0,0.08);
+        }
+
+        .contact-box h2,
+        .contact-form h2,
+        .faq h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background-color: #080808;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #38bdf8;
+            color: #000;
+        }
+
+        .thank-you {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #080808;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            margin: 0 12px;
+            font-size: 22px;
+        }
+
+        .social-icons a:hover {
+            color: #38bdf8;
+        }
+
+        @media (max-width: 900px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="Logo.png" alt="Hot Beans Web Logo" height="70">
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Jobs.html">Jobs</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <h1>Contact Hot Beans Web</h1>
+    <p>Get in touch about job opportunities, applications, or general enquiries.</p>
+</section>
+
+<section class="contact-section">
+
+    <!-- LEFT COLUMN -->
+    <div>
+        <div class="contact-box">
+            <h2>Contact Details</h2>
+            <p>📍 21 Digital Way, London, UK</p>
+            <p>📧 careers@hotbeansweb.co.uk</p>
+            <p>☎ 020 1234 5678</p>
+            <p>⏰ Monday – Friday, 9am – 5pm</p>
+        </div>
+
+        <br>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1584687898494!2d-0.19606800000000002!3d51.3523869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876080482323c1d%3A0x899621e2cceb967f!2sOverton%20Grange%20School!5e1!3m2!1sen!2suk!4v1768684787274!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+
+            <form onsubmit="document.getElementById('thanks').style.display='block'; return false;">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required>
+
+                <label for="subject">Subject *</label>
+                <select id="subject" required>
+                    <option value="">Select an option</option>
+                    <option>Job Application</option>
+                    <option>Training Courses</option>
+                    <option>General Enquiry</option>
+                </select>
+
+                <label for="message">Message *</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div id="thanks" class="thank-you">
+                Thank you for contacting Hot Beans Web. We will respond shortly.
+            </div>
+        </div>
+
+        <br>
+
+        <div class="faq">
+            <h2>FAQs</h2>
+            <p><strong>How long does it take to respond?</strong><br>We aim to reply within 2 working days.</p>
+            <p><strong>Can I apply with limited experience?</strong><br>Yes, we welcome trainee and junior developers.</p>
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Hot Beans Web</p>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

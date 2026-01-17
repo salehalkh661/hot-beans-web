@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hot Beans Web | Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #080808;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 80px 40px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .image-section {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .image-box {
+            background-color: #ffffff;
+            box-shadow: 0 4px 11px rgba(0,0,0,0.08);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .image-box:hover {
+            transform: translateY(-6px);
+        }
+
+        .image-wrapper {
+            position: relative;
+            height: 220px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,0,0,0.75);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+        }
+
+        .image-wrapper:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .image-text {
+            padding: 20px;
+        }
+
+        .image-text h3 {
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .image-text ul {
+            margin: 10px 0;
+            padding-left: 18px;
+        }
+
+        .image-text li {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .profile-links {
+            margin-top: 12px;
+        }
+
+        .profile-links a {
+            color: #38bdf8;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #080808;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            margin: 0 12px;
+            font-size: 22px;
+        }
+
+        .social-icons a:hover {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="Logo.png" alt="Hot Beans Web Logo" height="70">
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Jobs.html">Jobs</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <h1>Meet Our Team</h1>
+    <p>
+        Our team consists of trainee and junior developers who are gaining
+        real-world experience within the web development industry.
+    </p>
+</section>
+
+<section class="image-section">
+
+    <!-- TEAM MEMBER 1 -->
+    <div class="image-box">
+        <div class="image-wrapper">
+            <img src="Founder.png" alt="Front-End Developer">
+            <div class="image-overlay">
+                HTML • CSS • JavaScript • Git
+            </div>
+        </div>
+        <div class="image-text">
+            <h3>Alex Johnson</h3>
+            <p class="role">Front-End Developer</p>
+
+            <ul>
+                <li>Builds responsive page layouts</li>
+                <li>Implements interactive features</li>
+                <li>Tests across devices and browsers</li>
+            </ul>
+
+            <p><strong>Background:</strong> Joined as a trainee after completing a Level 3 IT qualification.</p>
+            <p class="quote">“Hot Beans Web helped me turn my coding skills into real projects.”</p>
+
+            <div class="profile-links">
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM MEMBER 2 -->
+    <div class="image-box">
+        <div class="image-wrapper">
+            <img src="Ceo.png" alt="UI UX Designer">
+            <div class="image-overlay">
+                UX • Accessibility • Prototyping
+            </div>
+        </div>
+        <div class="image-text">
+            <h3>Priya Patel</h3>
+            <p class="role">UI / UX Designer</p>
+
+            <ul>
+                <li>Designs accessible interfaces</li>
+                <li>Creates wireframes and layouts</li>
+                <li>Improves user experience</li>
+            </ul>
+
+            <p><strong>Background:</strong> Studied digital design and accessibility-focused UX.</p>
+            <p class="quote">“Designing with accessibility in mind is a core value at Hot Beans Web.”</p>
+
+            <div class="profile-links">
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM MEMBER 3 -->
+    <div class="image-box">
+        <div class="image-wrapper">
+            <img src="Manager.png" alt="Full Stack Developer">
+            <div class="image-overlay">
+                JavaScript • Python • Databases
+            </div>
+        </div>
+        <div class="image-text">
+            <h3>Sam Williams</h3>
+            <p class="role">Junior Full-Stack Developer</p>
+
+            <ul>
+                <li>Develops back-end functionality</li>
+                <li>Manages data and APIs</li>
+                <li>Supports front-end development</li>
+            </ul>
+
+            <p><strong>Background:</strong> Progressed from front-end into full-stack development.</p>
+            <p class="quote">“The team environment here really supports skill progression.”</p>
+
+            <div class="profile-links">
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Hot Beans Web</p>
+
+   <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
